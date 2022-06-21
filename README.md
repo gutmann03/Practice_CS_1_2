@@ -1,0 +1,1 @@
+This is second task of my summer practice in KMA. It will be graphical editor written on java.
