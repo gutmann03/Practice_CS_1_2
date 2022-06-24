@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MyToolBar extends JToolBar {
+    public JButton nothingButton;
     public JButton pencilButton;
     public JButton eraserButton;
     public JButton brushButton;
@@ -10,8 +11,14 @@ public class MyToolBar extends JToolBar {
     public JButton ovalButton;
     public JButton rectangleButton;
     public JButton starButton;
+    public JButton archButton;
+    public JButton roundRectButton;
+    public JButton triangleButton;
 
     MyToolBar(){
+        nothingButton = new JButton(new ImageIcon("src/images/cursor.png"));
+        nothingButton.setSize(new Dimension(25, 25));
+
         pencilButton = new JButton(new ImageIcon("src/images/pencil.png"));
         pencilButton.setSize(new Dimension(25, 25));
 
@@ -36,9 +43,16 @@ public class MyToolBar extends JToolBar {
         starButton = new JButton(new ImageIcon("src/images/star.png"));
         starButton.setSize(new Dimension(25, 25));
 
+        archButton = new JButton(new ImageIcon("src/images/h_circle.png"));
+        archButton.setSize(new Dimension(25, 25));
 
+        roundRectButton = new JButton(new ImageIcon("src/images/r_rect.png"));
+        roundRectButton.setSize(new Dimension(25, 25));
 
+        triangleButton = new JButton(new ImageIcon("src/images/triangle.png"));
+        triangleButton.setSize(new Dimension(25, 25));
 
+        this.add(nothingButton);
         this.add(pencilButton);
         this.add(eraserButton);
         this.add(brushButton);
@@ -47,5 +61,8 @@ public class MyToolBar extends JToolBar {
         this.add(ovalButton);
         this.add(rectangleButton);
         this.add(starButton);
+        this.add(archButton);
+        this.add(roundRectButton);
+        this.add(triangleButton);
     }
 }
