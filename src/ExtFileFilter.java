@@ -1,9 +1,9 @@
 import javax.swing.filechooser.FileFilter;
 
-class TextFileFilter extends FileFilter
+class ExtFileFilter extends FileFilter
 {
     private String ext;
-    public TextFileFilter(String ext)
+    public ExtFileFilter(String ext)
     {
         this.ext = ext;
     }

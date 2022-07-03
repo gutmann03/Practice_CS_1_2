@@ -62,23 +62,23 @@ public class MyFrame extends JFrame implements ActionListener {
         tb.roundRectButton.addActionListener(this);
         tb.triangleButton.addActionListener(this);
 
-        cb.colorbutton.addActionListener(this);
-        cb.blackbutton.addActionListener(this);
-        cb.yellowbutton.addActionListener(this);
-        cb.magentabutton.addActionListener(this);
-        cb.orangebutton.addActionListener(this);
-        cb.redbutton.addActionListener(this);
-        cb.whitebutton.addActionListener(this);
-        cb.cyanbutton.addActionListener(this);
-        cb.greenbutton.addActionListener(this);
-        cb.bluebutton.addActionListener(this);
+        cb.colorButton.addActionListener(this);
+        cb.blackButton.addActionListener(this);
+        cb.yellowButton.addActionListener(this);
+        cb.magentaButton.addActionListener(this);
+        cb.orangeButton.addActionListener(this);
+        cb.redButton.addActionListener(this);
+        cb.whiteButton.addActionListener(this);
+        cb.cyanButton.addActionListener(this);
+        cb.greenButton.addActionListener(this);
+        cb.blueButton.addActionListener(this);
 
         // setting upper panel
         upperPanel = new JPanel();
         upperPanel.setBounds(0, 0, MAX_WIDTH, 40);
         upperPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         upperPanel.add(tb);
-        upperPanel.add(cb.colorbutton);
+        upperPanel.add(cb.colorButton);
         upperPanel.add(cb);
         isFilled = new JCheckBox("make filled");
         isFilled.addActionListener(this);
@@ -130,33 +130,33 @@ public class MyFrame extends JFrame implements ActionListener {
             mainPanel.state = State.MAKE_TRIANGLE;
         }
 
-        if(cb.whitebutton == e.getSource()){
+        if(cb.whiteButton == e.getSource()){
             mainPanel.mainColor = Color.white;
-            cb.colorbutton.setBackground(Color.white);
-        }else if(cb.blackbutton == e.getSource()){
+            cb.colorButton.setBackground(Color.white);
+        }else if(cb.blackButton == e.getSource()){
             mainPanel.mainColor = Color.black;
-            cb.colorbutton.setBackground(Color.black);
-        }else if(cb.bluebutton == e.getSource()){
+            cb.colorButton.setBackground(Color.black);
+        }else if(cb.blueButton == e.getSource()){
             mainPanel.mainColor = Color.blue;
-            cb.colorbutton.setBackground(Color.blue);
-        }else if(cb.cyanbutton == e.getSource()){
+            cb.colorButton.setBackground(Color.blue);
+        }else if(cb.cyanButton == e.getSource()){
             mainPanel.mainColor = Color.cyan;
-            cb.colorbutton.setBackground(Color.cyan);
-        }else if(cb.redbutton == e.getSource()){
+            cb.colorButton.setBackground(Color.cyan);
+        }else if(cb.redButton == e.getSource()){
             mainPanel.mainColor = Color.red;
-            cb.colorbutton.setBackground(Color.red);
-        }else if(cb.yellowbutton == e.getSource()){
+            cb.colorButton.setBackground(Color.red);
+        }else if(cb.yellowButton == e.getSource()){
             mainPanel.mainColor = Color.yellow;
-            cb.colorbutton.setBackground(Color.yellow);
-        }else if(cb.orangebutton == e.getSource()){
+            cb.colorButton.setBackground(Color.yellow);
+        }else if(cb.orangeButton == e.getSource()){
             mainPanel.mainColor = Color.orange;
-            cb.colorbutton.setBackground(Color.orange);
-        }else if(cb.magentabutton == e.getSource()){
+            cb.colorButton.setBackground(Color.orange);
+        }else if(cb.magentaButton == e.getSource()){
             mainPanel.mainColor = Color.magenta;
-            cb.colorbutton.setBackground(Color.magenta);
-        }else if(cb.greenbutton == e.getSource()){
+            cb.colorButton.setBackground(Color.magenta);
+        }else if(cb.greenButton == e.getSource()){
             mainPanel.mainColor = Color.green;
-            cb.colorbutton.setBackground(Color.green);
+            cb.colorButton.setBackground(Color.green);
         }
 
         mainPanel.isFilled = isFilled.isSelected();
@@ -166,7 +166,7 @@ public class MyFrame extends JFrame implements ActionListener {
             mainPanel.image = new BufferedImage(3200, 3200, BufferedImage.TYPE_INT_RGB);
             Graphics2D d2 = (Graphics2D) mainPanel.image.createGraphics();
             d2.setColor(Color.white);
-            d2.fillRect(0, 0, this.getWidth(), this.getHeight());
+            d2.fillRect(0, 0, 3200, 3200);
             mainPanel.repaint();
         }
 
@@ -177,8 +177,8 @@ public class MyFrame extends JFrame implements ActionListener {
                 try{
                     fileName = jf.getSelectedFile().getAbsolutePath();
                     File iF = new File(fileName);
-                    jf.addChoosableFileFilter(new TextFileFilter(".png"));
-                    jf.addChoosableFileFilter(new TextFileFilter(".jpg"));
+                    jf.addChoosableFileFilter(new ExtFileFilter(".png"));
+                    jf.addChoosableFileFilter(new ExtFileFilter(".jpg"));
                     mainPanel.image = ImageIO.read(iF);
                     mainPanel.setSize(mainPanel.image.getWidth(), mainPanel.image.getWidth());
                     mainPanel.repaint();
@@ -189,8 +189,8 @@ public class MyFrame extends JFrame implements ActionListener {
         }else if(e.getSource() == saveItem){
             try{
                 JFileChooser jf = new  JFileChooser();
-                TextFileFilter pngFilter = new TextFileFilter(".png");
-                TextFileFilter jpgFilter = new TextFileFilter(".jpg");
+                ExtFileFilter pngFilter = new ExtFileFilter(".png");
+                ExtFileFilter jpgFilter = new ExtFileFilter(".jpg");
                 if(fileName == null){
                     jf.addChoosableFileFilter(pngFilter);
                     jf.addChoosableFileFilter(jpgFilter);
@@ -210,8 +210,8 @@ public class MyFrame extends JFrame implements ActionListener {
         }else if(e.getSource() == saveAsItem){
             try{
                 JFileChooser jf = new  JFileChooser();
-                TextFileFilter pngFilter = new TextFileFilter(".png");
-                TextFileFilter jpgFilter = new TextFileFilter(".jpg");
+                ExtFileFilter pngFilter = new ExtFileFilter(".png");
+                ExtFileFilter jpgFilter = new ExtFileFilter(".jpg");
                 jf.addChoosableFileFilter(pngFilter);
                 jf.addChoosableFileFilter(jpgFilter);
                 int result = jf.showSaveDialog(null);

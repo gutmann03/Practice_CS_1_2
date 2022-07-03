@@ -1,5 +1,3 @@
-import jdk.dynalink.support.AbstractRelinkableCallSite;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -162,11 +160,5 @@ class MyPanel extends JPanel {
         }
         super.paintComponent(g);
         g.drawImage(image, 0, 0,this);
-    }
-
-    public void clean(Graphics g){
-        g.setColor(Color.white);
-        g.drawRect(0, 0, 3200, 3200);
-        MyPanel.this.repaint();
     }
 }

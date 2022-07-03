@@ -2,77 +2,77 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MyColorBar extends JToolBar {
-    JButton colorbutton;
-    JButton redbutton;
-    JButton orangebutton;
-    JButton yellowbutton;
-    JButton greenbutton;
-    JButton bluebutton;
-    JButton cyanbutton;
-    JButton magentabutton;
-    JButton whitebutton;
-    JButton blackbutton;
+    JButton colorButton;
+    JButton redButton;
+    JButton orangeButton;
+    JButton yellowButton;
+    JButton greenButton;
+    JButton blueButton;
+    JButton cyanButton;
+    JButton magentaButton;
+    JButton whiteButton;
+    JButton blackButton;
 
     public MyColorBar(){
-        colorbutton = new JButton();
-        colorbutton.setBackground(Color.black);
-        colorbutton.setSize( 40, 40);
+        colorButton = new JButton();
+        colorButton.setBackground(Color.black);
+        colorButton.setSize( 40, 40);
 
 
-        redbutton = new JButton();
-        redbutton.setBackground(Color.red);
-        redbutton.setSize( 20, 20);
+        redButton = new JButton();
+        redButton.setBackground(Color.red);
+        redButton.setSize( 20, 20);
 
 
-        orangebutton = new JButton();
-        orangebutton.setBackground(Color.orange);
-        orangebutton.setSize( 20, 20);
+        orangeButton = new JButton();
+        orangeButton.setBackground(Color.orange);
+        orangeButton.setSize( 20, 20);
 
 
-        yellowbutton = new JButton();
-        yellowbutton.setBackground(Color.yellow);
-        yellowbutton.setSize( 20, 20);
+        yellowButton = new JButton();
+        yellowButton.setBackground(Color.yellow);
+        yellowButton.setSize( 20, 20);
 
 
-        greenbutton = new JButton();
-        greenbutton.setBackground(Color.green);
-        greenbutton.setSize( 20, 20);
+        greenButton = new JButton();
+        greenButton.setBackground(Color.green);
+        greenButton.setSize( 20, 20);
 
 
-        bluebutton = new JButton();
-        bluebutton.setBackground(Color.blue);
-        bluebutton.setSize( 20, 20);
+        blueButton = new JButton();
+        blueButton.setBackground(Color.blue);
+        blueButton.setSize( 20, 20);
 
 
-        cyanbutton = new JButton();
-        cyanbutton.setBackground(Color.cyan);
-        cyanbutton.setSize( 20, 20);
+        cyanButton = new JButton();
+        cyanButton.setBackground(Color.cyan);
+        cyanButton.setSize( 20, 20);
 
 
-        magentabutton = new JButton();
-        magentabutton.setBackground(Color.magenta);
-        magentabutton.setSize( 20, 20);
+        magentaButton = new JButton();
+        magentaButton.setBackground(Color.magenta);
+        magentaButton.setSize( 20, 20);
 
 
-        whitebutton = new JButton();
-        whitebutton.setBackground(Color.white);
-        whitebutton.setSize( 20, 20);
+        whiteButton = new JButton();
+        whiteButton.setBackground(Color.white);
+        whiteButton.setSize( 20, 20);
 
 
-        blackbutton = new JButton();
-        blackbutton.setBackground(Color.black);
-        blackbutton.setSize( 20, 20);
+        blackButton = new JButton();
+        blackButton.setBackground(Color.black);
+        blackButton.setSize( 20, 20);
 
         //this.add(colorbutton);
-        this.add(redbutton);
-        this.add(orangebutton);
-        this.add(yellowbutton);
-        this.add(greenbutton);
-        this.add(bluebutton);
-        this.add(cyanbutton);
-        this.add(magentabutton);
-        this.add(whitebutton);
-        this.add(blackbutton);
+        this.add(redButton);
+        this.add(orangeButton);
+        this.add(yellowButton);
+        this.add(greenButton);
+        this.add(blueButton);
+        this.add(cyanButton);
+        this.add(magentaButton);
+        this.add(whiteButton);
+        this.add(blackButton);
 
         this.setLayout(new FlowLayout());
     }
